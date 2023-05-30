@@ -13,6 +13,7 @@ public class EnemyScript : MonoBehaviour
     public int CurrentHealth;
     public HealthBarScript HealthBar;
     public EnemySpawner SpawnerScript;
+    public InkManager InkScript;
 
     void Start()
     {
@@ -33,7 +34,12 @@ public class EnemyScript : MonoBehaviour
         {
             SpawnerScript = GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawner>(); 
             SpawnerScript.Spawn();
+
+            InkScript = GameObject.FindGameObjectWithTag("Inky").GetComponent<InkManager>();
+            InkScript.AddInk();
+
             Destroy(gameObject);
+            
         }
     }
 

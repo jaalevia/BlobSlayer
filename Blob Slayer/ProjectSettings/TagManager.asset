@@ -6,6 +6,8 @@ TagManager:
   tags:
   - SliderHealth
   - Canvas
+  - Spawner
+  - Inky
   layers:
   - Default
   - TransparentFX
