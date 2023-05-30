@@ -12,6 +12,7 @@ public class EnemyScript : MonoBehaviour
     public int MaxHealth = 10;
     public int CurrentHealth;
     public HealthBarScript HealthBar;
+    public EnemySpawner SpawnerScript;
 
     void Start()
     {
@@ -30,6 +31,8 @@ public class EnemyScript : MonoBehaviour
         }
         if (CurrentHealth == 0)
         {
+            SpawnerScript = GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawner>(); 
+            SpawnerScript.Spawn();
             Destroy(gameObject);
         }
     }

@@ -124,8 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e658628c304d7419c24101e74684ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Canvas: {fileID: 0}
-  AppearingDamage: {fileID: 0}
   MaxHealth: 10
   CurrentHealth: 0
   HealthBar: {fileID: 0}
+  SpawnerScript: {fileID: 0}

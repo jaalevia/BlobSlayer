@@ -10,11 +10,10 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-       
         Spawn();
     }
 
-    void Spawn()
+    public void Spawn()
     {
         GameObject newObject = Instantiate(EnemyList[Random.Range(0, EnemyList.Count)], SpawnToObject.transform.position, Quaternion.identity);
         newObject.transform.SetParent(SpawnToObject.transform);
