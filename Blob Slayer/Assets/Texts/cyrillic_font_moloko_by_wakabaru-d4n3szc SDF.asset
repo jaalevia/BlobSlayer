@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: cyrillic_font_moloko_by_wakabaru-d4n3szc SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 1229236645
   material: {fileID: 3416839740602904627}
-  materialHashCode: 0
+  materialHashCode: 973688165
   m_Version: 1.1.0
   m_SourceFontFileGUID: dbca7d15181692143ae74bdf2b568351
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: dbca7d15181692143ae74bdf2b568351, type: 3}
@@ -2181,9 +2181,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
