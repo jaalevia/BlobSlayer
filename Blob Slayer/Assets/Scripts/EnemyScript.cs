@@ -14,6 +14,7 @@ public class EnemyScript : MonoBehaviour
     public HealthBarScript HealthBar;
     public EnemySpawner SpawnerScript;
     public InkManager InkScript;
+    public int _takeDmg = 2;
 
     void Start()
     {
@@ -27,10 +28,10 @@ public class EnemyScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            TakeDamage(2);
+            TakeDamage(_takeDmg);
             //ShowDamageTaken();
         }
-        if (CurrentHealth == 0)
+        if (CurrentHealth <= 0)
         {
             SpawnerScript = GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawner>(); 
             SpawnerScript.Spawn();
@@ -45,7 +46,7 @@ public class EnemyScript : MonoBehaviour
 
     void OnMouseDown()
     {
-        TakeDamage(2);
+        TakeDamage(_takeDmg);
         //ShowDamageTaken();
     }
 
@@ -57,7 +58,7 @@ public class EnemyScript : MonoBehaviour
         AppearingDamage.text = "Hello World!";
         
     }*/
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     { 
         CurrentHealth -= damage;
         HealthBar.SetHealth(CurrentHealth);
