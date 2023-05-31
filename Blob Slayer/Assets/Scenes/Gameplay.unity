@@ -2567,6 +2567,7 @@ GameObject:
   - component: {fileID: 1003506708}
   - component: {fileID: 1003506707}
   - component: {fileID: 1003506710}
+  - component: {fileID: 1003506711}
   m_Layer: 5
   m_Name: AutoClickButton
   m_TagString: Untagged
@@ -2651,6 +2652,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1003506711}
+        m_TargetAssemblyTypeName: AutoClickScript, Assembly-CSharp
+        m_MethodName: AutoClickButtonDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1003506708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2705,6 +2718,20 @@ MonoBehaviour:
   - {fileID: 326434641}
   - {fileID: 1362272177}
   - {fileID: 2029952384}
+--- !u!114 &1003506711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003506705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47943bf4cd47bb544a6bd82f67878021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyAutoManagerScript: {fileID: 0}
+  Seconds: 0a0000000500000003000000
 --- !u!1 &1050680084
 GameObject:
   m_ObjectHideFlags: 0
@@ -3539,7 +3566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyManagerScript: {fileID: 0}
-  DamageBooster: 030000000400000005000000
+  DamageBooster: 02000000030000000400000005000000
 --- !u!1 &1545960578
 GameObject:
   m_ObjectHideFlags: 0
