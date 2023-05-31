@@ -2731,7 +2731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyAutoManagerScript: {fileID: 0}
-  Seconds: 0a0000000500000003000000
+  Seconds: 008d27000a0000000500000003000000
 --- !u!1 &1050680084
 GameObject:
   m_ObjectHideFlags: 0
