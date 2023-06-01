@@ -15,14 +15,17 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
     public float MaxHealth = 10;
     public float CurrentHealth;
     public HealthBarScript HealthBar;
+    public NewShopScript NewShop;
     public EnemySpawner SpawnerScript;
     public InkManager InkScript;
-    public int _takeDmg = 2;
+    public int _takeDmg;
 
     void Start()
     {
         HealthBar = GameObject.FindGameObjectWithTag("SliderHealth").GetComponent<HealthBarScript>();
         HealthBarDamage = GameObject.Find("Damage").GetComponent<TextMeshProUGUI>();
+        NewShop = GameObject.Find("NewShop").GetComponent<NewShopScript>();
+        _takeDmg = NewShop._dropDamageTracker;
         CurrentHealth = MaxHealth;
         HealthBar.SetMaxHealth(MaxHealth);
         HealthBarDamage.text = CurrentHealth.ToString();
@@ -63,6 +66,7 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
 
     public void TakeDamage(int damage)
     {
+        Debug.Log(NewShop._dropDamageTracker);
         FindObjectOfType<AudioManager>().Play("Damage Sound");
         CurrentHealth -= damage;
         HealthBar.SetHealth(CurrentHealth);

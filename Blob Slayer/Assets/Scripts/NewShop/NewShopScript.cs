@@ -29,7 +29,8 @@ public class NewShopScript : MonoBehaviour
     private int _penInt = 1;
     private int _inkInt = 1;
     private int _blutterInt = 1;
-    private int _takeDamageTracker = 0;
+    [HideInInspector]
+    public int _dropDamageTracker = 2;
     private int _coroutineTracker = 0;
 
     
@@ -58,8 +59,8 @@ public class NewShopScript : MonoBehaviour
             InkManagerScript.inkText.text = "Ink: " + InkManagerScript.inkCount.ToString();
             PenPrice *= 2;
             _penInt++;
-            _takeDamageTracker++;
-            EnemyManagerScript._takeDmg += _takeDamageTracker;
+            _dropDamageTracker += 1;
+            Debug.Log(EnemyManagerScript._takeDmg);
         }
         PenText.text = "" + _penInt.ToString();
         PenPriceText.text = "" + PenPrice.ToString();
