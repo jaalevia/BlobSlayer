@@ -7,10 +7,16 @@ public class SceneManagmentt : MonoBehaviour
 {
     public void NextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Invoke("ChangeScene", 1);
+
     }
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    private void ChangeScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
