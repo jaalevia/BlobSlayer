@@ -53,6 +53,7 @@ public class NewShopScript : MonoBehaviour
 
         if (InkManagerScript.inkCount >= PenPrice)
         {
+            FindObjectOfType<AudioManager>().Play("Upgrade Sound");
             InkManagerScript.inkCount -= PenPrice;
             InkManagerScript.inkText.text = "Ink: " + InkManagerScript.inkCount.ToString();
             PenPrice *= 2;
@@ -71,6 +72,7 @@ public class NewShopScript : MonoBehaviour
 
         if (InkManagerScript.inkCount >= InkPrice)
         {
+            FindObjectOfType<AudioManager>().Play("Upgrade Sound");
             InkManagerScript.inkCount -= InkPrice;
             InkManagerScript.inkText.text = "Ink: " + InkManagerScript.inkCount.ToString();
             InkPrice *= 2;
@@ -90,7 +92,8 @@ public class NewShopScript : MonoBehaviour
 
         if (InkManagerScript.inkCount >= BlutterPrice)
         {
-            
+            FindObjectOfType<AudioManager>().Play("Upgrade Sound");
+
             if (_coroutineTracker == 0)
                 {
                     StartCoroutine(WaitingTime());
