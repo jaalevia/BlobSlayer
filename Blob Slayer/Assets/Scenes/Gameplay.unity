@@ -664,6 +664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkText: {fileID: 72172514}
   HowMuchToAdd: 1
+  inkCount: 0
 --- !u!1 &146038122
 GameObject:
   m_ObjectHideFlags: 0
@@ -3995,7 +3996,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2944818e46198604db23fc25178389f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e869846215e916e4c8bc8dd348808737, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6075,7 +6076,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2944818e46198604db23fc25178389f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0fa2c97fde584cd49a1716adbfe5f54e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
