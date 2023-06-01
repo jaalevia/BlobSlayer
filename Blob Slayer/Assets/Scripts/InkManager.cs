@@ -9,7 +9,8 @@ public class InkManager : MonoBehaviour
     public TextMeshProUGUI inkText;
 
     public int HowMuchToAdd;
-    int inkCount;
+    [HideInInspector]
+    public float inkCount;
     void Start()
     {
         inkText.text = "Ink: " + inkCount.ToString();

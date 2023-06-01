@@ -19,8 +19,8 @@ public class NewShopScript : MonoBehaviour
     public TextMeshProUGUI BlutterPriceText;
 
     [Header("Цена")]
-    public int PenPrice;
-    public int InkPrice;
+    public float PenPrice;
+    public float InkPrice;
     public float BlutterPrice;
 
     [Header("Начальное время автокликера")]
@@ -37,7 +37,6 @@ public class NewShopScript : MonoBehaviour
 
     private void Start()
     {
-
         PenPriceText.text = "" + PenPrice.ToString();
         InkPriceText.text = "" + InkPrice.ToString();
         BlutterPriceText.text = "" + BlutterPrice.ToString();
@@ -48,40 +47,65 @@ public class NewShopScript : MonoBehaviour
     }
     public void PenButtonDown()
     {
-        PenPrice *= 2;
-        _penInt++;
         PenText.text = "" + _penInt.ToString();
         PenPriceText.text = "" + PenPrice.ToString();
         EnemyManagerScript = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyScript>();
-        _takeDamageTracker++;
-        
-        EnemyManagerScript._takeDmg += _takeDamageTracker;
+
+        if (InkManagerScript.inkCount >= PenPrice)
+        {
+            InkManagerScript.inkCount -= PenPrice;
+            InkManagerScript.inkText.text = "Ink: " + InkManagerScript.inkCount.ToString();
+            PenPrice *= 2;
+            _penInt++;
+            _takeDamageTracker++;
+            EnemyManagerScript._takeDmg += _takeDamageTracker;
+        }
+        PenText.text = "" + _penInt.ToString();
+        PenPriceText.text = "" + PenPrice.ToString();
     }
 
     public void InkButtonDown()
     {
-        InkPrice *= 2;
-        _inkInt++;
         InkText.text = "" + _inkInt.ToString();
         InkPriceText.text = "" + InkPrice.ToString();
-        InkManagerScript.HowMuchToAdd += 1;
+
+        if (InkManagerScript.inkCount >= InkPrice)
+        {
+            InkManagerScript.inkCount -= InkPrice;
+            InkManagerScript.inkText.text = "Ink: " + InkManagerScript.inkCount.ToString();
+            InkPrice *= 2;
+            _inkInt++;
+            InkManagerScript.HowMuchToAdd += 1;
+        }
+        InkText.text = "" + _inkInt.ToString();
+        InkPriceText.text = "" + InkPrice.ToString();
+
     }
 
     public void BlutterButtonDown()
     {
-        BlutterPrice = Mathf.Round(BlutterPrice *= 1.5f);
         EnemyManagerScript = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyScript>();
-        if (_coroutineTracker == 0)
-        {
-            StartCoroutine(WaitingTime());
-        }
-        _coroutineTracker = 1;
-        _blutterInt++;
         BlutterText.text = "" + _blutterInt.ToString();
         BlutterPriceText.text = "" + BlutterPrice.ToString();
-        AutoClickerTime -= 0.5f;
-        Debug.Log(AutoClickerTime);
-        
+
+        if (InkManagerScript.inkCount >= BlutterPrice)
+        {
+            
+            if (_coroutineTracker == 0)
+                {
+                    StartCoroutine(WaitingTime());
+                }
+
+            _coroutineTracker = 1;
+            BlutterPrice = Mathf.Round(BlutterPrice *= 1.5f);
+            InkManagerScript.inkCount -= BlutterPrice;
+            InkManagerScript.inkText.text = "Ink: " + InkManagerScript.inkCount.ToString();
+            _blutterInt++;
+            AutoClickerTime -= 0.5f;
+            Debug.Log(AutoClickerTime);
+            BlutterText.text = "" + _blutterInt.ToString();
+            BlutterPriceText.text = "" + BlutterPrice.ToString();
+        } 
     }
 
     private IEnumerator WaitingTime()
