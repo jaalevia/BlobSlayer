@@ -5689,9 +5689,9 @@ MonoBehaviour:
   PenPriceText: {fileID: 48521723}
   InkPriceText: {fileID: 2077389102}
   BlutterPriceText: {fileID: 597012158}
-  PenPrice: 10
-  InkPrice: 10
-  BlutterPrice: 10
+  PenPrice: 2
+  InkPrice: 2
+  BlutterPrice: 50
   AutoClickerTime: 5
   _dropDamageTracker: 2
 --- !u!1 &1856798029

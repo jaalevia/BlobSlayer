@@ -54,7 +54,7 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
             InkScript = GameObject.FindGameObjectWithTag("Inky").GetComponent<InkManager>();
             InkScript.AddInk();
 
-            HealthBar.MaxHealthCurrent = Mathf.Round(HealthBar.MaxHealthCurrent *= 1.15f);
+            HealthBar.MaxHealthCurrent = HealthBar.MaxHealthCurrent + 1;
 
             Destroy(gameObject);
         }
