@@ -14,25 +14,25 @@ public class NewShopScript : MonoBehaviour
 
     private void Start()
     {
-        PenText.text = "Уровень: " + _penInt.ToString();
-        InkText.text = "Уровень: " + _inkInt.ToString();
-        BlutterText.text = "Уровень: " + _blutterInt.ToString();
+        PenText.text = "" + _penInt.ToString();
+        InkText.text = "" + _inkInt.ToString();
+        BlutterText.text = "" + _blutterInt.ToString();
     }
     public void PenButtonDown()
     {
         _penInt++;
-        PenText.text = "Уровень: " + _penInt.ToString();
+        PenText.text = "" + _penInt.ToString();
     }
 
     public void InkButtonDown()
     {
         _inkInt++;
-        InkText.text = "Уровень: " + _inkInt.ToString();
+        InkText.text = "" + _inkInt.ToString();
     }
 
     public void BlutterButtonDown()
     {
         _blutterInt++;
-        BlutterText.text = "Уровень: " + _blutterInt.ToString();
+        BlutterText.text = "" + _blutterInt.ToString();
     }
 }
