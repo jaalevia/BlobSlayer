@@ -9,6 +9,7 @@ TagManager:
   - Spawner
   - Inky
   - Enemy
+  - Pop Up
   layers:
   - Default
   - TransparentFX

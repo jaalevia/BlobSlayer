@@ -16,6 +16,8 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
     public NewShopScript NewShop;
     public EnemySpawner SpawnerScript;
     public InkManager InkScript;
+    public PopOut Pop;
+    public TextMeshProUGUI TextMeshPop;
     public int _takeDmg;
 
     void Start()
@@ -69,6 +71,8 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
     {
         FindObjectOfType<AudioManager>().Play("Damage Sound");
         CurrentHealth -= damage;
+        Pop = GameObject.Find("PopUpSpawner").GetComponent<PopOut>();
+        Pop.CreatePopUp();
         HealthBar.SetHealth(CurrentHealth);
         HealthBarDamage.text = CurrentHealth.ToString();
     }
