@@ -2090,7 +2090,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1832234394}
-        m_TargetAssemblyTypeName: ShopTestScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: NewShopScript, Assembly-CSharp
         m_MethodName: InkButtonDown
         m_Mode: 1
         m_Arguments:
@@ -3028,7 +3028,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1832234394}
-        m_TargetAssemblyTypeName: ShopTestScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: NewShopScript, Assembly-CSharp
         m_MethodName: PenButtonDown
         m_Mode: 1
         m_Arguments:
@@ -4267,7 +4267,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1832234394}
-        m_TargetAssemblyTypeName: ShopTestScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: NewShopScript, Assembly-CSharp
         m_MethodName: BlutterButtonDown
         m_Mode: 1
         m_Arguments:
@@ -5170,7 +5170,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1832234392}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c6b902c001cd5841be72e36df22f267, type: 3}
+  m_Script: {fileID: 11500000, guid: 28c7c55c22873274a93a8c0f5be95285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PenText: {fileID: 1429252965}
