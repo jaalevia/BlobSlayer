@@ -925,6 +925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slider: {fileID: 237856680}
+  MaxHealthCurrent: 10
 --- !u!114 &237856680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1554,6 +1555,7 @@ MonoBehaviour:
   MaxHealth: 10
   CurrentHealth: 0
   HealthBar: {fileID: 0}
+  NewShop: {fileID: 0}
   SpawnerScript: {fileID: 0}
   InkScript: {fileID: 0}
   _takeDmg: 2
@@ -3873,7 +3875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1137999589
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5691,6 +5693,7 @@ MonoBehaviour:
   InkPrice: 10
   BlutterPrice: 10
   AutoClickerTime: 5
+  _dropDamageTracker: 2
 --- !u!1 &1856798029
 GameObject:
   m_ObjectHideFlags: 0

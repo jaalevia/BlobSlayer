@@ -9,10 +9,8 @@ using UnityEngine.EventSystems;
 
 public class EnemyScript : MonoBehaviour, IPointerClickHandler
 {
-    //public Canvas Canvas;
-    //public GameObject AppearingDamage;
     public TextMeshProUGUI HealthBarDamage;
-    public float MaxHealth = 10;
+    public float MaxHealth;
     public float CurrentHealth;
     public HealthBarScript HealthBar;
     public NewShopScript NewShop;
@@ -25,6 +23,7 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
         HealthBar = GameObject.FindGameObjectWithTag("SliderHealth").GetComponent<HealthBarScript>();
         HealthBarDamage = GameObject.Find("Damage").GetComponent<TextMeshProUGUI>();
         NewShop = GameObject.Find("NewShop").GetComponent<NewShopScript>();
+        MaxHealth = HealthBar.MaxHealthCurrent;
         _takeDmg = NewShop._dropDamageTracker;
         CurrentHealth = MaxHealth;
         HealthBar.SetMaxHealth(MaxHealth);
@@ -54,6 +53,8 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
             InkScript = GameObject.FindGameObjectWithTag("Inky").GetComponent<InkManager>();
             InkScript.AddInk();
 
+            HealthBar.MaxHealthCurrent = Mathf.Round(HealthBar.MaxHealthCurrent *= 1.3f);
+
             Destroy(gameObject);
         }
     }
@@ -65,7 +66,6 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
 
     public void TakeDamage(int damage)
     {
-        Debug.Log(NewShop._dropDamageTracker);
         FindObjectOfType<AudioManager>().Play("Damage Sound");
         CurrentHealth -= damage;
         HealthBar.SetHealth(CurrentHealth);
