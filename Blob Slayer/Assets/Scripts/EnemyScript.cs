@@ -47,7 +47,8 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
         }
         if (CurrentHealth <= 0)
         {
-            SpawnerScript = GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawner>(); 
+            
+            SpawnerScript = GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawner>();
             SpawnerScript.Spawn();
 
             InkScript = GameObject.FindGameObjectWithTag("Inky").GetComponent<InkManager>();
