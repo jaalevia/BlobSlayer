@@ -5409,6 +5409,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyList:
   - {fileID: 5176759590865808740, guid: de0bcb6c3da4bbb4ea772eb6cf788a83, type: 3}
+  - {fileID: 3896336676948769661, guid: 3af167c8668846845af020f80af6207f, type: 3}
+  - {fileID: 5107207078301660858, guid: fc130a943b7ca22429e0ad8a8f28531e, type: 3}
+  - {fileID: 6195417696816943225, guid: 68012e91ba09e5a4d9703e6d2e7f20b2, type: 3}
+  - {fileID: 6435939893387589201, guid: ed75bc34c9b4211418dcab5ef3582f76, type: 3}
+  - {fileID: 6224380372388656904, guid: 5ddc2e44bc4c5a44f9b6bdc607a937b2, type: 3}
   SpawnToObject: {fileID: 1591726490}
   endCutScene: {fileID: 1137999588}
   enemyToCutScene: 60
