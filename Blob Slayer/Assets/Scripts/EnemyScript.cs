@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class EnemyScript : MonoBehaviour
+public class EnemyScript : MonoBehaviour, IPointerClickHandler
 {
     //public Canvas Canvas;
     //public GameObject AppearingDamage;
@@ -44,7 +45,7 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
+    public void OnPointerClick(PointerEventData eventData)
     {
         TakeDamage(_takeDmg);
         //ShowDamageTaken();
