@@ -15,6 +15,9 @@ public class EnemyScript : MonoBehaviour
     public EnemySpawner SpawnerScript;
     public InkManager InkScript;
     public int _takeDmg = 2;
+    PopOutScript popOutScript;
+    public TextMeshPro textMesh;
+    
 
     void Start()
     {
@@ -26,6 +29,7 @@ public class EnemyScript : MonoBehaviour
     void Update()
 
     {
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(_takeDmg);
@@ -47,19 +51,12 @@ public class EnemyScript : MonoBehaviour
     void OnMouseDown()
     {
         TakeDamage(_takeDmg);
-        //ShowDamageTaken();
     }
 
-    /*void ShowDamageTaken()
-    {
-        Canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
-        Instantiate(AppearingDamage, AppearingDamage.transform.position, Quaternion.identity);
-        gameObject.transform.SetParent(Canvas.transform);
-        AppearingDamage.text = "Hello World!";
-        
-    }*/
     public void TakeDamage(int damage)
-    { 
+    {
+        popOutScript = GameObject.Find("GamingSystem").GetComponent<PopOutScript>();
+        popOutScript.CreatePopUp();
         CurrentHealth -= damage;
         HealthBar.SetHealth(CurrentHealth);
     }
