@@ -8,9 +8,14 @@ public class SceneManagmentt : MonoBehaviour
     public void NextScene()
     {
         Invoke("ChangeScene", 1);
-
     }
-    public void MainMenu()
+
+    public void GoToMenu()
+    {
+        Invoke("MainMenu", 1);
+    }
+
+    private void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }

@@ -203,7 +203,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9ae327800545fe9499a1196c27df0b65, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 979fb69f9ac5dd048ac3be6f22e5a111, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -736,7 +736,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1802848560}
         m_TargetAssemblyTypeName: SceneManagmentt, Assembly-CSharp
-        m_MethodName: NextScene
+        m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
