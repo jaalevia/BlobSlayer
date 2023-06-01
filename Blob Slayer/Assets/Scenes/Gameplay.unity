@@ -480,7 +480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &121003983
@@ -1595,6 +1595,7 @@ MonoBehaviour:
   SpawnerScript: {fileID: 0}
   InkScript: {fileID: 0}
   Pop: {fileID: 0}
+  TextMeshPop: {fileID: 0}
   _takeDmg: 2
 --- !u!61 &417032125
 BoxCollider2D:
@@ -1799,8 +1800,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1375578186}
   - {fileID: 1256018044}
+  - {fileID: 1375578186}
   - {fileID: 1591726491}
   - {fileID: 237856678}
   - {fileID: 293020846}
@@ -4286,7 +4287,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 489051378}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4671,7 +4672,7 @@ RectTransform:
   - {fileID: 112227930}
   - {fileID: 875855229}
   m_Father: {fileID: 489051378}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4697,8 +4698,9 @@ MonoBehaviour:
   - {fileID: 2107466276}
   - {fileID: 112227929}
   - {fileID: 875855228}
-  prefab: {fileID: 3294387977948042158, guid: d53c9bf255305024783a4a10fb0fb978, type: 3}
+  prefab: {fileID: 5307990147285153796, guid: d53c9bf255305024783a4a10fb0fb978, type: 3}
   enemy: {fileID: 0}
+  textMeshProUGUI: {fileID: 0}
 --- !u!1 &1386986609
 GameObject:
   m_ObjectHideFlags: 0

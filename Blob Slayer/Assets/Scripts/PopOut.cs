@@ -9,6 +9,7 @@ public class PopOut : MonoBehaviour
     public static PopOut current;
     public GameObject prefab;
     public EnemyScript enemy;
+    public TextMeshProUGUI textMeshProUGUI;
 
     private void Awake()
     {
@@ -21,8 +22,9 @@ public class PopOut : MonoBehaviour
         enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyScript>();
         GameObject popup = Instantiate(prefab, spawnToObject[a].transform.position, Quaternion.identity);
         popup.transform.SetParent(spawnToObject[a].transform);
-        GameObject.FindGameObjectWithTag("Pop Up").GetComponent<TextMeshProUGUI>().SetText(enemy._takeDmg.ToString());
+        textMeshProUGUI = GameObject.FindGameObjectWithTag("Pop Up").GetComponent<TextMeshProUGUI>();
+        textMeshProUGUI.SetText(enemy._takeDmg.ToString());
 
-        Destroy(popup, 0.2f);
+        Destroy(popup, 0.3f);
     }
 }
