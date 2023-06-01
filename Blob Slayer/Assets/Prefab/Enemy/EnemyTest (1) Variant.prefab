@@ -9,7 +9,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6096760070418375362, guid: 37c915cdc513f91448d59275ac94575f, type: 3}
       propertyPath: m_Name
-      value: EnemyTest (1)
+      value: EnemyTest (1) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096760070418375372, guid: 37c915cdc513f91448d59275ac94575f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096760070418375372, guid: 37c915cdc513f91448d59275ac94575f, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6096760070418375372, guid: 37c915cdc513f91448d59275ac94575f, type: 3}
       propertyPath: m_Color.b
@@ -17,11 +25,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6096760070418375372, guid: 37c915cdc513f91448d59275ac94575f, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6096760070418375372, guid: 37c915cdc513f91448d59275ac94575f, type: 3}
       propertyPath: m_Color.r
-      value: 0.9331193
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096760070418375372, guid: 37c915cdc513f91448d59275ac94575f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6096760070418375373, guid: 37c915cdc513f91448d59275ac94575f, type: 3}
       propertyPath: m_RootOrder

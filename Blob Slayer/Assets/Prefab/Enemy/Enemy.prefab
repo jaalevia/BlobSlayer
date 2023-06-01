@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7390677813892689408
+--- !u!1 &5176759590865808740
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5164507328435355614}
-  - component: {fileID: 1047410245038311150}
-  - component: {fileID: 2465428586253703467}
-  - component: {fileID: 6467412345609456355}
-  - component: {fileID: 2420013312873492433}
+  - component: {fileID: 1641863806743005891}
+  - component: {fileID: 1264253878357711724}
+  - component: {fileID: 7165197103156236465}
+  - component: {fileID: 2472193916244189402}
+  - component: {fileID: 6757719036829856312}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -20,16 +20,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &5164507328435355614
+--- !u!224 &1641863806743005891
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7390677813892689408}
+  m_GameObject: {fileID: 5176759590865808740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.69064, y: 0.69064, z: 0.69064}
+  m_LocalScale: {x: 0.83205, y: 0.83205, z: 0.83205}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -37,24 +37,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28, y: -62}
+  m_AnchoredPosition: {x: -50, y: -56}
   m_SizeDelta: {x: 1053, y: 622}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1047410245038311150
+--- !u!222 &1264253878357711724
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7390677813892689408}
+  m_GameObject: {fileID: 5176759590865808740}
   m_CullTransparentMesh: 1
---- !u!114 &2465428586253703467
+--- !u!114 &7165197103156236465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7390677813892689408}
+  m_GameObject: {fileID: 5176759590865808740}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -78,31 +78,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6467412345609456355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7390677813892689408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58e658628c304d7419c24101e74684ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 10
-  CurrentHealth: 0
-  HealthBar: {fileID: 0}
-  SpawnerScript: {fileID: 0}
-  InkScript: {fileID: 0}
-  _takeDmg: 2
---- !u!61 &2420013312873492433
+--- !u!61 &2472193916244189402
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7390677813892689408}
+  m_GameObject: {fileID: 5176759590865808740}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -122,3 +104,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6757719036829856312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5176759590865808740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e658628c304d7419c24101e74684ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 10
+  CurrentHealth: 0
+  HealthBar: {fileID: 0}
+  SpawnerScript: {fileID: 0}
+  InkScript: {fileID: 0}
+  _takeDmg: 2
