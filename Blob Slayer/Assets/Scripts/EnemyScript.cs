@@ -52,7 +52,6 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
             InkScript.AddInk();
 
             Destroy(gameObject);
-            
         }
     }
 
