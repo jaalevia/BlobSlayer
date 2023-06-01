@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2392157, g: 0.2392157, b: 0.2392157, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -125,4 +125,5 @@ MonoBehaviour:
   InkScript: {fileID: 0}
   Pop: {fileID: 0}
   TextMeshPop: {fileID: 0}
+  Imgae: {fileID: 7165197103156236465}
   _takeDmg: 2
