@@ -19,7 +19,7 @@ public class PopOut : MonoBehaviour
     {
         int a = Random.Range(0, spawnToObject.Count);
         enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyScript>();
-        prefab.GetComponent<TextMeshPro>().SetText(enemy._takeDmg.ToString());
+        prefab.GetComponent<TextMeshProUGUI>().SetText(enemy._takeDmg.ToString());
         GameObject popup = Instantiate(prefab, spawnToObject[a].transform.position, Quaternion.identity);
         popup.transform.SetParent(spawnToObject[a].transform);
 

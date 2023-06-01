@@ -16,10 +16,12 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
     public NewShopScript NewShop;
     public EnemySpawner SpawnerScript;
     public InkManager InkScript;
+    public PopOut Pop;
     public int _takeDmg;
 
     void Start()
     {
+        Pop = GameObject.Find("PopUpSpawner").GetComponent<PopOut>();
         HealthBar = GameObject.FindGameObjectWithTag("SliderHealth").GetComponent<HealthBarScript>();
         HealthBarDamage = GameObject.Find("Damage").GetComponent<TextMeshProUGUI>();
         NewShop = GameObject.Find("NewShop").GetComponent<NewShopScript>();
@@ -69,6 +71,7 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
     {
         FindObjectOfType<AudioManager>().Play("Damage Sound");
         CurrentHealth -= damage;
+        Pop.CreatePopUp();
         HealthBar.SetHealth(CurrentHealth);
         HealthBarDamage.text = CurrentHealth.ToString();
     }

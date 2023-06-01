@@ -1594,6 +1594,7 @@ MonoBehaviour:
   NewShop: {fileID: 0}
   SpawnerScript: {fileID: 0}
   InkScript: {fileID: 0}
+  Pop: {fileID: 0}
   _takeDmg: 2
 --- !u!61 &417032125
 BoxCollider2D:
@@ -4696,7 +4697,7 @@ MonoBehaviour:
   - {fileID: 2107466276}
   - {fileID: 112227929}
   - {fileID: 875855228}
-  prefab: {fileID: 1301417435653584918, guid: 07c85baf81bd95046afd571150122d4e, type: 3}
+  prefab: {fileID: 3294387977948042158, guid: d53c9bf255305024783a4a10fb0fb978, type: 3}
   enemy: {fileID: 0}
 --- !u!1 &1386986609
 GameObject:
