@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2772381015081647807}
   - component: {fileID: 4088669455788471820}
   - component: {fileID: 8762028939111922927}
+  - component: {fileID: 6390974972620042821}
   m_Layer: 5
   m_Name: Enemy4
   m_TagString: Enemy
@@ -125,5 +126,24 @@ MonoBehaviour:
   InkScript: {fileID: 0}
   Pop: {fileID: 0}
   TextMeshPop: {fileID: 0}
-  Imgae: {fileID: 2772381015081647807}
   _takeDmg: 2
+--- !u!95 &6390974972620042821
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435939893387589201}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 15778c1ac1ff27749a68724ddda87d65, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

@@ -21,6 +21,7 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
     //public Image Imgae;
     //private Color _imageColor;
     public int _takeDmg;
+    //private Animation anim;
 
     void Start()
     {
@@ -68,6 +69,8 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
             _imageColor.a -= disappearSpeed * Time.deltaTime;
             Imgae.color = _imageColor;
             Debug.Log(Imgae.color);*/
+            //anim = gameObject.GetComponent<Animation>();
+            //anim.Play();
 
 
             Destroy(gameObject);
