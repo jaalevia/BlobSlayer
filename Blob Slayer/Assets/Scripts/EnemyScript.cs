@@ -18,13 +18,14 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
     public InkManager InkScript;
     public PopOut Pop;
     public TextMeshProUGUI TextMeshPop;
-    public Image Imgae;
-    private Color _imageColor;
+    //public Image Imgae;
+    //private Color _imageColor;
     public int _takeDmg;
 
     void Start()
     {
-        _imageColor = Imgae.color;
+        //Imgae = gameObject.GetComponent<Image>();
+        //_imageColor = Imgae.color;
         HealthBar = GameObject.FindGameObjectWithTag("SliderHealth").GetComponent<HealthBarScript>();
         HealthBarDamage = GameObject.Find("Damage").GetComponent<TextMeshProUGUI>();
         NewShop = GameObject.Find("NewShop").GetComponent<NewShopScript>();
@@ -33,6 +34,7 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
         CurrentHealth = MaxHealth;
         HealthBar.SetMaxHealth(MaxHealth);
         HealthBarDamage.text = CurrentHealth.ToString();
+        //Debug.Log(Imgae.color);
     }
 
     void Update()
@@ -64,7 +66,9 @@ public class EnemyScript : MonoBehaviour, IPointerClickHandler
 
             /*float disappearSpeed = 3f;
             _imageColor.a -= disappearSpeed * Time.deltaTime;
-            Imgae.color = _imageColor;*/
+            Imgae.color = _imageColor;
+            Debug.Log(Imgae.color);*/
+
 
             Destroy(gameObject);
         }
